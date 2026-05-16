@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drizzle CSS — Classless CSS framework</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <header>
+    <h1>Drizzle CSS</h1>
+    <p class="lead">A classless-first CSS framework. Bare semantic HTML renders well — classes only when you need more.</p>
+
+    <p>
+      <button id="theme-toggle" type="button">Toggle theme</button>
+      <a href="https://github.com/" class="button-outline" role="button" style="display:inline-block;padding:.5rem 1.5rem;text-decoration:none;">Source</a>
+    </p>
+  </header>
+
+  <hr>
+
+  <main>
+    <h2>What it is</h2>
+    <p>
+      Drizzle styles plain semantic HTML using CSS variables. No build step needed for consumers — drop one
+      <code>&lt;link&gt;</code> tag and write markup. Customise by overriding any <code>--variable</code>.
+    </p>
+
+    <p>This very page uses no classes for layout — only for the theme toggle button variant and the lead paragraph.</p>
+
+    <h2>Demos</h2>
+    <nav>
+      <ul>
+        <li><a href="typography.html">Typography</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="palette.html">Palette</a></li>
+        <li><a href="components.html">Components</a></li>
+      </ul>
+    </nav>
+
+    <h2>Quick example</h2>
+    <p>Bare markup:</p>
+    <pre><code>&lt;article&gt;
+  &lt;h1&gt;Hello&lt;/h1&gt;
+  &lt;p&gt;World&lt;/p&gt;
+  &lt;button&gt;Click&lt;/button&gt;
+&lt;/article&gt;</code></pre>
+
+    <h2>Theming</h2>
+    <p>
+      Every visual is driven by CSS variables on <code>:root</code>. Override one to retheme. Example —
+      change the link colour to red:
+    </p>
+    <pre><code>:root { --color-link: #ff0000; }</code></pre>
+
+    <h2>Dark mode</h2>
+    <p>
+      Auto-respects <code>prefers-color-scheme</code>. Add <code>.dark</code> or <code>.light</code> to
+      <code>&lt;html&gt;</code> to force a mode. The toggle above demonstrates the class override.
+    </p>
+
+    <blockquote>
+      Classless-first means readable markup wins. Classes enhance, never gate.
+      <cite>Drizzle CSS</cite>
+    </blockquote>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p><small>Drizzle CSS — MIT licensed. Built with Lightning CSS.</small></p>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const isDark = html.classList.contains('dark') ||
+        (!html.classList.contains('light') && matchMedia('(prefers-color-scheme: dark)').matches);
+      html.classList.remove('dark', 'light');
+      html.classList.add(isDark ? 'light' : 'dark');
+    });
+  </script>
+
+</body>
+</html>

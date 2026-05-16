@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Components — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <h1>Components</h1>
+
+  <h2>Details / summary</h2>
+  <details>
+    <summary>What is Drizzle CSS?</summary>
+    <p>A classless-first CSS framework driven by CSS variables, bundled with Lightning CSS.</p>
+  </details>
+
+  <details open>
+    <summary>Why classless?</summary>
+    <p>Because semantic HTML deserves to look good without ceremony. Classes enhance, they don't gate.</p>
+  </details>
+
+  <h2>Figure</h2>
+  <figure>
+    <svg viewBox="0 0 200 100" width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="200" height="100" fill="var(--color-blue)"/>
+      <text x="100" y="58" text-anchor="middle" fill="white" font-size="22" font-family="sans-serif">SVG</text>
+    </svg>
+    <figcaption>An inline SVG with theme-aware fill via CSS variable.</figcaption>
+  </figure>
+
+  <h2>Dialog</h2>
+  <button type="button" onclick="document.getElementById('demo-dialog').showModal()">Open dialog</button>
+  <dialog id="demo-dialog">
+    <h3>Hello</h3>
+    <p>This is a native &lt;dialog&gt; element, themed by Drizzle.</p>
+    <form method="dialog">
+      <button>Close</button>
+    </form>
+  </dialog>
+
+  <h2>Blockquote with cite</h2>
+  <blockquote>
+    <p>Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.</p>
+    <cite>Antoine de Saint-Exupéry</cite>
+  </blockquote>
+
+  <h2>Cards (utility)</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Card one</h3>
+      <p>Just a <code>.card</code> wrapper around semantic content.</p>
+    </article>
+    <article class="card">
+      <h3>Card two</h3>
+      <p>Background uses <code>--color-surface</code>, border uses <code>--color-border</code>.</p>
+    </article>
+    <article class="card">
+      <h3>Card three</h3>
+      <p>Override either variable to retheme every card on the page.</p>
+    </article>
+  </div>
+
+  <h2>Buttons</h2>
+  <p class="row">
+    <button>Primary</button>
+    <button class="button-outline">Outline</button>
+    <button class="button-ghost">Ghost</button>
+    <button disabled>Disabled</button>
+  </p>
+
+</body>
+</html>

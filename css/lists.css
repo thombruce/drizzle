@@ -1,0 +1,49 @@
+/* Lists: ul, ol, dl. */
+
+ul,
+ol {
+  margin: 0 0 var(--gutter-md);
+  padding-left: var(--gutter-lg);
+}
+
+ul { list-style: disc; }
+ol { list-style: decimal; }
+
+li {
+  margin-bottom: var(--gutter-xs);
+}
+
+li > ul,
+li > ol {
+  margin-top: var(--gutter-xs);
+  margin-bottom: 0;
+}
+
+ul ul { list-style: circle; }
+ul ul ul { list-style: square; }
+
+dl {
+  margin: 0 0 var(--gutter-md);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--gutter-xs) var(--gutter-md);
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+dd {
+  margin: 0;
+  color: var(--color-text);
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-md);
+}

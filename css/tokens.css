@@ -1,0 +1,99 @@
+/* Theme tokens — every value overridable via :root or scoped element. */
+
+:root {
+  /* Palette — base hues */
+  --color-red:    #e5484d;
+  --color-orange: #f76b15;
+  --color-yellow: #f5d90a;
+  --color-green:  #30a46c;
+  --color-blue:   #3b82f6;
+  --color-indigo: #6366f1;
+  --color-violet: #8b5cf6;
+  --color-pink:   #ec4899;
+
+  /* Semantic aliases */
+  --color-error:   var(--color-red);
+  --color-warning: var(--color-yellow);
+  --color-success: var(--color-green);
+  --color-info:    var(--color-blue);
+
+  /* Surface / text (light theme) */
+  --color-bg:         #ffffff;
+  --color-surface:    #f6f6f7;
+  --color-surface-2:  #ececef;
+  --color-text:       #1c1c1f;
+  --color-muted:      #6b6b73;
+  --color-border:     #e1e1e6;
+  --color-link:       var(--color-blue);
+  --color-link-hover: var(--color-indigo);
+  --color-focus-ring: color-mix(in srgb, var(--color-link) 50%, transparent);
+  --color-selection:  color-mix(in srgb, var(--color-link) 25%, transparent);
+
+  /* Font families */
+  --font-family-sans: system-ui, -apple-system, "Segoe UI", Roboto,
+                      "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+                      "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+                      Consolas, "Liberation Mono", monospace;
+  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --font-family-base: var(--font-family-sans);
+
+  /* Type scale */
+  --font-size-base: 1rem;
+  --font-size-xs:   0.75rem;
+  --font-size-sm:   0.875rem;
+  --font-size-lg:   1.125rem;
+  --font-size-xl:   1.25rem;
+
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1.125rem;
+  --font-size-h6: 1rem;
+
+  --line-height-base:    1.6;
+  --line-height-tight:   1.25;
+  --line-height-heading: 1.2;
+
+  /* Weights */
+  --font-weight-light:   300;
+  --font-weight-normal:  400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+  --font-weight-heading: 700;
+
+  /* Gutters / spacing */
+  --gutter-xs: 0.25rem;
+  --gutter-sm: 0.5rem;
+  --gutter-md: 1rem;
+  --gutter-lg: 1.5rem;
+  --gutter-xl: 2.5rem;
+  --gutter-2xl: 4rem;
+
+  /* Borders */
+  --border-width-thin:  1px;
+  --border-width:       2px;
+  --border-width-thick: 4px;
+  --border-style:       solid;
+  --border:             var(--border-width-thin) var(--border-style) var(--color-border);
+
+  /* Radii */
+  --radius-sm:   0.25rem;
+  --radius:      0.5rem;
+  --radius-lg:   1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow:    0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Layout */
+  --container-width: 64rem;
+  --content-width:   42rem;
+
+  /* Motion */
+  --transition-fast: 120ms ease;
+  --transition:      200ms ease;
+}

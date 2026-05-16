@@ -1,0 +1,113 @@
+/* Optional enhancement classes. Framework is classless-first — these are extras. */
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter-lg);
+}
+
+.wide {
+  max-width: var(--container-width);
+}
+
+.narrow {
+  max-width: var(--content-width);
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-muted);
+  line-height: var(--line-height-base);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-md);
+}
+
+.stack-sm { gap: var(--gutter-sm); }
+.stack-lg { gap: var(--gutter-lg); }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-md);
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter-md);
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.card {
+  background: var(--color-surface);
+  border: var(--border-width-thin) var(--border-style) var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--gutter-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+.button-outline:hover:not(:disabled) {
+  background: var(--color-link);
+  color: #fff;
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--color-text);
+  border-color: transparent;
+}
+
+.button-ghost:hover:not(:disabled) {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

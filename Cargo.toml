@@ -1,0 +1,17 @@
+[package]
+name = "drizzle-build"
+version = "0.1.0"
+edition = "2021"
+description = "Build tool for Drizzle CSS — bundles and minifies source CSS via Lightning CSS."
+license = "MIT"
+
+[dependencies]
+lightningcss = "1.0.0-alpha.67"
+
+[[bin]]
+name = "drizzle-build"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true

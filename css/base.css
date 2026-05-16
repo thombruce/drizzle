@@ -1,0 +1,81 @@
+/* Body + global element baseline — applies with zero classes. */
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--gutter-xl) var(--gutter-lg);
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding: var(--gutter-2xl) var(--gutter-xl);
+  }
+}
+
+main,
+article,
+section,
+header,
+footer,
+aside,
+nav {
+  display: block;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+  transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: var(--border-width) solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+hr {
+  border: 0;
+  border-top: var(--border-width-thin) var(--border-style) var(--color-border);
+  margin: var(--gutter-lg) 0;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+small {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }

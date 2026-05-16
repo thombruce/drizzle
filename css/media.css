@@ -1,0 +1,63 @@
+/* Media + miscellaneous element styling. */
+
+figure {
+  margin: var(--gutter-lg) 0;
+  text-align: center;
+}
+
+figure > img,
+figure > picture,
+figure > video,
+figure > svg {
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
+figcaption {
+  margin-top: var(--gutter-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+img,
+video {
+  border-radius: var(--radius-sm);
+}
+
+details {
+  background: var(--color-surface);
+  border: var(--border-width-thin) var(--border-style) var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--gutter-sm) var(--gutter-md);
+  margin: 0 0 var(--gutter-md);
+}
+
+details[open] {
+  padding-bottom: var(--gutter-md);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  padding: var(--gutter-xs) 0;
+  list-style-position: outside;
+}
+
+summary:hover {
+  color: var(--color-link);
+}
+
+dialog {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: var(--border-width-thin) var(--border-style) var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--gutter-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: 32rem;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}

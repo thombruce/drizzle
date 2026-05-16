@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forms — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <h1>Forms</h1>
+
+  <form>
+    <fieldset>
+      <legend>Account</legend>
+
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" placeholder="Ada Lovelace" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" minlength="8" required>
+
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" placeholder="Tell us about yourself…"></textarea>
+
+      <label for="role">Role</label>
+      <select id="role" name="role">
+        <option>Developer</option>
+        <option>Designer</option>
+        <option>Manager</option>
+        <option>Other</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <label><input type="checkbox" checked> Subscribe to newsletter</label><br>
+      <label><input type="checkbox"> Send promotional email</label>
+
+      <p style="margin-top:1rem"><strong>Plan</strong></p>
+      <label><input type="radio" name="plan" checked> Free</label><br>
+      <label><input type="radio" name="plan"> Pro</label><br>
+      <label><input type="radio" name="plan"> Team</label>
+
+      <label for="vol" style="margin-top:1rem">Volume</label>
+      <input id="vol" type="range" min="0" max="100" value="40">
+
+      <label for="color">Brand colour</label>
+      <input id="color" type="color" value="#3b82f6">
+
+      <label for="dob">Date of birth</label>
+      <input id="dob" type="date">
+
+      <label for="avatar">Avatar</label>
+      <input id="avatar" type="file">
+    </fieldset>
+
+    <fieldset>
+      <legend>States</legend>
+      <label for="disabled-input">Disabled input</label>
+      <input id="disabled-input" type="text" value="Cannot edit" disabled>
+
+      <label for="invalid-input">Invalid input (type something short)</label>
+      <input id="invalid-input" type="email" placeholder="not-an-email" value="bad">
+    </fieldset>
+
+    <p>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button" class="button-outline">Outline</button>
+      <button type="button" class="button-ghost">Ghost</button>
+      <button type="button" disabled>Disabled</button>
+    </p>
+  </form>
+
+  <h2>Progress + meter</h2>
+  <label for="prog">Upload</label>
+  <progress id="prog" value="65" max="100">65%</progress>
+
+  <label for="met">Disk usage</label>
+  <meter id="met" value="0.7" min="0" max="1" low="0.3" high="0.8" optimum="0.5">70%</meter>
+
+</body>
+</html>

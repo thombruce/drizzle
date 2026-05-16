@@ -1,0 +1,62 @@
+/* Palette utility classes — optional enhancements. */
+
+.text-red    { color: var(--color-red); }
+.text-orange { color: var(--color-orange); }
+.text-yellow { color: var(--color-yellow); }
+.text-green  { color: var(--color-green); }
+.text-blue   { color: var(--color-blue); }
+.text-indigo { color: var(--color-indigo); }
+.text-violet { color: var(--color-violet); }
+.text-pink   { color: var(--color-pink); }
+
+.bg-red    { background: var(--color-red);    color: #fff; }
+.bg-orange { background: var(--color-orange); color: #fff; }
+.bg-yellow { background: var(--color-yellow); color: #1c1c1f; }
+.bg-green  { background: var(--color-green);  color: #fff; }
+.bg-blue   { background: var(--color-blue);   color: #fff; }
+.bg-indigo { background: var(--color-indigo); color: #fff; }
+.bg-violet { background: var(--color-violet); color: #fff; }
+.bg-pink   { background: var(--color-pink);   color: #fff; }
+
+.border-red    { border-color: var(--color-red); }
+.border-orange { border-color: var(--color-orange); }
+.border-yellow { border-color: var(--color-yellow); }
+.border-green  { border-color: var(--color-green); }
+.border-blue   { border-color: var(--color-blue); }
+.border-indigo { border-color: var(--color-indigo); }
+.border-violet { border-color: var(--color-violet); }
+.border-pink   { border-color: var(--color-pink); }
+
+/* Semantic aliases */
+
+.text-error   { color: var(--color-error); }
+.text-warning { color: var(--color-warning); }
+.text-success { color: var(--color-success); }
+.text-info    { color: var(--color-info); }
+
+.bg-error   { background: var(--color-error);   color: #fff; }
+.bg-warning { background: var(--color-warning); color: #1c1c1f; }
+.bg-success { background: var(--color-success); color: #fff; }
+.bg-info    { background: var(--color-info);    color: #fff; }
+
+.border-error   { border-color: var(--color-error); }
+.border-warning { border-color: var(--color-warning); }
+.border-success { border-color: var(--color-success); }
+.border-info    { border-color: var(--color-info); }
+
+/* Tinted alert surface — combines bg tint with semantic border-left. */
+
+.alert {
+  display: block;
+  padding: var(--gutter-md) var(--gutter-lg);
+  margin: 0 0 var(--gutter-md);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  border-left: var(--border-width-thick) var(--border-style) var(--color-border);
+  color: var(--color-text);
+}
+
+.alert.error   { border-left-color: var(--color-error);   background: color-mix(in srgb, var(--color-error)   12%, var(--color-bg)); }
+.alert.warning { border-left-color: var(--color-warning); background: color-mix(in srgb, var(--color-warning) 18%, var(--color-bg)); }
+.alert.success { border-left-color: var(--color-success); background: color-mix(in srgb, var(--color-success) 12%, var(--color-bg)); }
+.alert.info    { border-left-color: var(--color-info);    background: color-mix(in srgb, var(--color-info)    12%, var(--color-bg)); }
