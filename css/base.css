@@ -59,6 +59,20 @@ hr {
   margin: var(--gutter-lg) 0;
 }
 
+aside {
+  background: var(--color-surface-2);
+  border-left: var(--border-width-thick) var(--border-style) var(--color-border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: var(--gutter-sm) var(--gutter-md);
+  margin: var(--gutter-md) 0;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
 abbr[title] {
   text-decoration: underline dotted;
   cursor: help;
