@@ -3,6 +3,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
+    color-scheme: dark;
+
     --color-bg:         var(--dark-color-bg);
     --color-surface:    var(--dark-color-surface);
     --color-surface-2:  var(--dark-color-surface-2);
@@ -11,6 +13,7 @@
     --color-border:     var(--dark-color-border);
     --color-link:       var(--dark-color-link);
     --color-link-hover: var(--dark-color-link-hover);
+    --color-selection:  var(--dark-color-selection);
 
     --shadow-sm: var(--dark-shadow-sm);
     --shadow:    var(--dark-shadow);
@@ -19,6 +22,8 @@
 }
 
 :root.dark {
+  color-scheme: dark;
+
   --color-bg:         var(--dark-color-bg);
   --color-surface:    var(--dark-color-surface);
   --color-surface-2:  var(--dark-color-surface-2);
@@ -27,6 +32,7 @@
   --color-border:     var(--dark-color-border);
   --color-link:       var(--dark-color-link);
   --color-link-hover: var(--dark-color-link-hover);
+  --color-selection:  var(--dark-color-selection);
 
   --shadow-sm: var(--dark-shadow-sm);
   --shadow:    var(--dark-shadow);
@@ -34,4 +40,3 @@
 }
 
 :root.light { color-scheme: light; }
-:root.dark  { color-scheme: dark;  }
