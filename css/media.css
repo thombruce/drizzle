@@ -40,7 +40,7 @@ summary {
   cursor: pointer;
   font-weight: var(--font-weight-medium);
   padding: var(--gutter-xs) 0;
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 summary:hover {
