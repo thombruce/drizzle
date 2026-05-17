@@ -54,10 +54,10 @@ dialog {
   border-radius: var(--radius-lg);
   padding: var(--gutter-lg);
   box-shadow: var(--shadow-lg);
-  max-width: 32rem;
+  max-width: var(--dialog-width);
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+  background: var(--backdrop-bg);
+  backdrop-filter: var(--backdrop-blur);
 }

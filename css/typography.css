@@ -18,12 +18,12 @@ h6:first-child {
   margin-top: 0;
 }
 
-h1 { font-size: var(--font-size-h1); letter-spacing: -0.02em; }
-h2 { font-size: var(--font-size-h2); letter-spacing: -0.015em; }
+h1 { font-size: var(--font-size-h1); letter-spacing: var(--letter-spacing-tight); }
+h2 { font-size: var(--font-size-h2); letter-spacing: var(--letter-spacing-snug); }
 h3 { font-size: var(--font-size-h3); }
 h4 { font-size: var(--font-size-h4); }
 h5 { font-size: var(--font-size-h5); }
-h6 { font-size: var(--font-size-h6); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+h6 { font-size: var(--font-size-h6); text-transform: uppercase; letter-spacing: var(--letter-spacing-wide); color: var(--color-muted); }
 
 p {
   margin: 0 0 var(--gutter-md);
@@ -81,7 +81,7 @@ pre {
   border: var(--border-width-thin) var(--border-style) var(--color-border);
   overflow-x: auto;
   margin: var(--gutter-md) 0;
-  line-height: 1.5;
+  line-height: var(--line-height-base);
 }
 
 pre code {

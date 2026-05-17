@@ -48,7 +48,7 @@ select {
 }
 
 textarea {
-  min-height: 6rem;
+  min-height: var(--textarea-min-height);
   resize: vertical;
 }
 
@@ -74,7 +74,7 @@ input:disabled,
 textarea:disabled,
 select:disabled,
 button:disabled {
-  opacity: 0.55;
+  opacity: var(--opacity-disabled);
   cursor: not-allowed;
 }
 
@@ -148,7 +148,7 @@ button:active:not(:disabled),
 [type="submit"]:active:not(:disabled),
 [type="reset"]:active:not(:disabled),
 [type="button"]:active:not(:disabled) {
-  transform: translateY(1px);
+  transform: var(--button-press);
 }
 
 [type="reset"] {
@@ -165,13 +165,13 @@ button:active:not(:disabled),
 
 progress {
   width: 100%;
-  height: 0.6rem;
+  height: var(--meter-height);
   accent-color: var(--color-link);
 }
 
 meter {
   width: 100%;
-  height: 0.6rem;
+  height: var(--meter-height);
 }
 
 output {
