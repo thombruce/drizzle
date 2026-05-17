@@ -1,12 +1,24 @@
 [package]
-name = "drizzle-build"
+name = "drizzle-css"
 version = "0.1.0"
 edition = "2021"
-description = "Build tool for Drizzle CSS — bundles and minifies source CSS via Lightning CSS."
+description = "Classless-first CSS framework — exposes compiled CSS as &'static str constants."
 license = "MIT"
+repository = "https://github.com/thombruce/drizzle"
+keywords = ["css", "classless", "framework", "static-site", "stylesheet"]
+categories = ["web-programming", "development-tools"]
+include = ["css/**", "src/**", "build.rs", "README.md", "LICENSE"]
+build = "build.rs"
 
 [dependencies]
 lightningcss = "1.0.0-alpha.67"
+
+[build-dependencies]
+lightningcss = "1.0.0-alpha.67"
+
+[lib]
+name = "drizzle_css"
+path = "src/lib.rs"
 
 [[bin]]
 name = "drizzle-build"

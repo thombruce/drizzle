@@ -18,6 +18,30 @@ A classless-first CSS framework driven by CSS variables, bundled with the Rust [
 </body>
 ```
 
+## Use in a Rust project
+
+Add to `Cargo.toml`:
+
+```toml
+[dependencies]
+drizzle-css = "0.1"
+```
+
+The CSS is compiled at build time and embedded as `&'static str` constants:
+
+```rust
+// Write to your output directory
+std::fs::write(output_dir.join("drizzle.css"), drizzle_css::CSS_MIN)?;
+```
+
+Then reference it from generated HTML:
+
+```html
+<link rel="stylesheet" href="drizzle.css">
+```
+
+Both `drizzle_css::CSS` (readable) and `drizzle_css::CSS_MIN` (minified) are available.
+
 ## Build
 
 Requires Rust (stable). The bundler uses Lightning CSS to inline `@import`s, transform modern syntax for target browsers, and emit both readable and minified outputs.
@@ -88,7 +112,9 @@ See `css/tokens.css` for the full list and defaults.
 
 ```
 css/             # source modules (entry: drizzle.css)
-src/main.rs      # Lightning CSS bundler
+src/lib.rs       # library — exposes CSS and CSS_MIN constants
+src/main.rs      # binary — bundles CSS to dist/
+build.rs         # compiles CSS at consumer build time
 demo/            # demo HTML pages
 dist/            # build output (gitignored)
 Cargo.toml
