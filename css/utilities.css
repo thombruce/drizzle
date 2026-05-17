@@ -96,6 +96,50 @@
   line-height: 1.4;
 }
 
+.prose {
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+
+.divider {
+  border: 0;
+  border-top: var(--border);
+  margin-block: var(--gutter-lg);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-sm);
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 .hidden {
   display: none !important;
 }
