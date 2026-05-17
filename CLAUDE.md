@@ -48,11 +48,11 @@ All visual values live in `css/tokens.css` as custom properties on `:root` — p
 
 ### Dark mode — two parallel paths
 
-`css/dark.css` declares the same dark overrides in two places:
+`css/dark.css` declares the same dark overrides in two trigger blocks:
 - `@media (prefers-color-scheme: dark) { :root:not(.light) { ... } }` — auto-respect OS, but `<html class="light">` opts out.
 - `:root.dark { ... }` — explicit class override regardless of OS.
 
-When adding new themed values, update both blocks together or dark mode will diverge from class-toggled dark.
+Both blocks map active vars (`--color-bg`, `--shadow`, etc.) to defaults declared once in `css/tokens.css` as `--dark-*` tokens. End users retheme dark mode by overriding a single `--dark-*` var. When adding a new themed value, add the `--dark-*` default to `tokens.css` and the `--color-x: var(--dark-color-x)` mapping to **both** trigger blocks — values are now single-sourced, but var **names** must stay in sync between the two triggers.
 
 ### Bundler output is gitignored
 

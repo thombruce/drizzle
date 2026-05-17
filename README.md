@@ -57,6 +57,15 @@ Override any variable on `:root` (or any scope):
 }
 ```
 
+Dark-theme values are single-sourced as `--dark-*` tokens. Override one var and both the OS-driven and `.dark`-toggled paths pick it up:
+
+```css
+:root {
+  --color-link:      #ff6b6b;   /* light theme */
+  --dark-color-link: #ff9b9b;   /* dark theme  */
+}
+```
+
 ### Variable reference (summary)
 
 | Group | Variables |
@@ -64,6 +73,7 @@ Override any variable on `:root` (or any scope):
 | Palette | `--color-{red,orange,yellow,green,blue,indigo,violet,pink}` |
 | Semantic | `--color-{error,warning,success,info}` |
 | Surface | `--color-{bg,surface,surface-2,text,muted,border,link,link-hover}` |
+| Dark | `--dark-color-{bg,surface,surface-2,text,muted,border,link,link-hover}`, `--dark-shadow{,-sm,-lg}` |
 | Type | `--font-family-{sans,mono,serif,base}`, `--font-size-{xs,sm,base,lg,xl,h1..h6}` |
 | Weight | `--font-weight-{light,normal,medium,bold,heading}` |
 | Spacing | `--gutter-{xs,sm,md,lg,xl,2xl}` |

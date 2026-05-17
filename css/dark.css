@@ -1,41 +1,37 @@
-/* Dark mode — auto via prefers-color-scheme, plus explicit .dark / .light overrides. */
+/* Dark mode — auto via prefers-color-scheme, plus explicit .dark / .light overrides.
+   Values come from --dark-* tokens in tokens.css. Override there to retheme. */
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
-    --color-bg:         #0e0e10;
-    --color-surface:    #17171a;
-    --color-surface-2:  #1f1f23;
-    --color-text:       #e7e7ea;
-    --color-muted:      #9c9ca6;
-    --color-border:     #2a2a31;
-    --color-link:       #60a5fa;
-    --color-link-hover: #a5b4fc;
+    --color-bg:         var(--dark-color-bg);
+    --color-surface:    var(--dark-color-surface);
+    --color-surface-2:  var(--dark-color-surface-2);
+    --color-text:       var(--dark-color-text);
+    --color-muted:      var(--dark-color-muted);
+    --color-border:     var(--dark-color-border);
+    --color-link:       var(--dark-color-link);
+    --color-link-hover: var(--dark-color-link-hover);
 
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
-    --shadow:    0 2px 8px rgba(0,0,0,0.5);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.6);
+    --shadow-sm: var(--dark-shadow-sm);
+    --shadow:    var(--dark-shadow);
+    --shadow-lg: var(--dark-shadow-lg);
   }
 }
 
 :root.dark {
-  --color-bg:         #0e0e10;
-  --color-surface:    #17171a;
-  --color-surface-2:  #1f1f23;
-  --color-text:       #e7e7ea;
-  --color-muted:      #9c9ca6;
-  --color-border:     #2a2a31;
-  --color-link:       #60a5fa;
-  --color-link-hover: #a5b4fc;
+  --color-bg:         var(--dark-color-bg);
+  --color-surface:    var(--dark-color-surface);
+  --color-surface-2:  var(--dark-color-surface-2);
+  --color-text:       var(--dark-color-text);
+  --color-muted:      var(--dark-color-muted);
+  --color-border:     var(--dark-color-border);
+  --color-link:       var(--dark-color-link);
+  --color-link-hover: var(--dark-color-link-hover);
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
-  --shadow:    0 2px 8px rgba(0,0,0,0.5);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.6);
+  --shadow-sm: var(--dark-shadow-sm);
+  --shadow:    var(--dark-shadow);
+  --shadow-lg: var(--dark-shadow-lg);
 }
 
-:root.light {
-  color-scheme: light;
-}
-
-:root.dark {
-  color-scheme: dark;
-}
+:root.light { color-scheme: light; }
+:root.dark  { color-scheme: dark;  }
