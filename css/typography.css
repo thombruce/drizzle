@@ -109,6 +109,30 @@ mark {
 
 del { text-decoration: line-through; color: var(--color-muted); }
 ins { text-decoration: underline; }
+s   { text-decoration: line-through; color: var(--color-muted); }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q::before { content: open-quote; }
+q::after  { content: close-quote; }
+
+cite {
+  font-style: italic;
+}
+
+var {
+  font-family: var(--font-family-mono);
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+dfn {
+  font-style: italic;
+  text-decoration: underline dotted;
+  cursor: help;
+}
 
 address {
   font-style: normal;
