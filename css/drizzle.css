@@ -4,14 +4,16 @@
  * Bundled with Lightning CSS.
  */
 
-@import "tokens.css";
-@import "dark.css";
-@import "reset.css";
-@import "base.css";
-@import "typography.css";
-@import "lists.css";
-@import "tables.css";
-@import "forms.css";
-@import "media.css";
-@import "utilities.css";
-@import "palette.css";
+@layer tokens, dark, reset, base, typography, lists, tables, forms, media, utilities, palette;
+
+@import "tokens.css"     layer(tokens);
+@import "dark.css"       layer(dark);
+@import "reset.css"      layer(reset);
+@import "base.css"       layer(base);
+@import "typography.css" layer(typography);
+@import "lists.css"      layer(lists);
+@import "tables.css"     layer(tables);
+@import "forms.css"      layer(forms);
+@import "media.css"      layer(media);
+@import "utilities.css"  layer(utilities);
+@import "palette.css"    layer(palette);
