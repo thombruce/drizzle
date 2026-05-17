@@ -73,5 +73,60 @@
     <button disabled>Disabled</button>
   </p>
 
+  <h2>Aside</h2>
+  <p>Main content flows here as normal prose.</p>
+  <aside>
+    <strong>Note:</strong> This is a bare <code>&lt;aside&gt;</code> — no class required.
+    The framework applies a thick left border and surface background by default.
+  </aside>
+  <p>Content continues after the aside.</p>
+
+  <h2>Iframe</h2>
+  <iframe src="lists.html" height="200" title="Embedded lists demo"></iframe>
+
+  <h2>Cluster</h2>
+  <div class="cluster">
+    <span class="badge">CSS</span>
+    <span class="badge">HTML</span>
+    <span class="badge">JavaScript</span>
+    <span class="badge">Rust</span>
+    <span class="badge">Web Components</span>
+    <span class="badge">Accessibility</span>
+    <span class="badge">Lightning CSS</span>
+  </div>
+
+  <h2>Avatar</h2>
+  <div class="row">
+    <div class="avatar" style="background:var(--color-blue);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">A</div>
+    <div class="avatar" style="background:var(--color-green);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">B</div>
+    <div class="avatar" style="background:var(--color-violet);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">C</div>
+  </div>
+
+  <h2>Skeleton</h2>
+  <div class="stack">
+    <div class="skeleton" style="height:1.25rem;width:55%"></div>
+    <div class="skeleton" style="height:1rem;"></div>
+    <div class="skeleton" style="height:1rem;width:80%"></div>
+    <div class="skeleton" style="height:1rem;width:65%"></div>
+  </div>
+
+  <h2>Divider</h2>
+  <p>Content above.</p>
+  <div class="divider"></div>
+  <p>Content below.</p>
+
+  <h2>Prose</h2>
+  <p>
+    <code>.prose</code> constrains content to <code>--content-width</code> and centres it —
+    useful for long-form text inside a wider <code>.container</code> wrapper. On this page
+    the body is already at content-width, but the pattern is:
+  </p>
+  <pre><code>&lt;div class="container"&gt;
+  &lt;div class="prose"&gt;
+    &lt;h1&gt;Article title&lt;/h1&gt;
+    &lt;p&gt;Long-form content, centred within a wide layout.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 </body>
 </html>
