@@ -83,6 +83,10 @@ textarea:invalid:not(:focus):not(:placeholder-shown) {
   border-color: var(--color-error);
 }
 
+optgroup {
+  font-weight: var(--font-weight-bold);
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   display: inline-block;
