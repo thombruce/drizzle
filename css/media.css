@@ -40,7 +40,23 @@ summary {
   cursor: pointer;
   font-weight: var(--font-weight-medium);
   padding: var(--gutter-xs) 0;
-  list-style-position: inside;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "▶";
+  display: inline-block;
+  font-size: 0.7em;
+  margin-right: var(--gutter-xs);
+  transition: transform var(--transition-default);
+}
+
+details[open] > summary::before {
+  transform: rotate(90deg);
 }
 
 summary:hover {

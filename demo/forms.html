@@ -69,6 +69,9 @@
 
       <label for="avatar">Avatar</label>
       <input id="avatar" type="file">
+
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Search…">
     </fieldset>
 
     <fieldset>
@@ -76,8 +79,13 @@
       <label for="disabled-input">Disabled input</label>
       <input id="disabled-input" type="text" value="Cannot edit" disabled>
 
+      <label for="readonly-input">Read-only input</label>
+      <input id="readonly-input" type="text" value="Cannot edit this" readonly>
+
       <label for="invalid-input">Invalid input (type something short)</label>
       <input id="invalid-input" type="email" placeholder="not-an-email" value="bad">
+
+      <label><input id="indet-check" type="checkbox"> Indeterminate checkbox (set via JS)</label>
     </fieldset>
 
     <p>
@@ -93,8 +101,15 @@
   <label for="prog">Upload</label>
   <progress id="prog" value="65" max="100">65%</progress>
 
+  <label for="prog-indet">Indeterminate progress (no value attribute)</label>
+  <progress id="prog-indet">Loading…</progress>
+
   <label for="met">Disk usage</label>
   <meter id="met" value="0.7" min="0" max="1" low="0.3" high="0.8" optimum="0.5">70%</meter>
+
+  <script>
+    document.getElementById('indet-check').indeterminate = true;
+  </script>
 
 </body>
 </html>

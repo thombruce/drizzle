@@ -23,6 +23,12 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 main,
 article,
 section,
@@ -39,6 +45,10 @@ a {
   text-underline-offset: 0.15em;
   text-decoration-thickness: 1px;
   transition: color var(--transition-fast);
+}
+
+a:visited {
+  color: var(--color-indigo);
 }
 
 a:hover,
@@ -92,6 +102,13 @@ header > nav {
   gap: var(--gutter-md);
   align-items: center;
   flex-wrap: wrap;
+}
+
+nav a[aria-current],
+nav a[aria-current="page"] {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 iframe {

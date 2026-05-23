@@ -1,0 +1,81 @@
+/* Print styles — clean output without interactive chrome. */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    max-width: 100%;
+    padding: 0;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  header > nav,
+  aside,
+  dialog,
+  .skeleton {
+    display: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:not([href^="#"]):not([href^="javascript:"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.875em;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  blockquote,
+  pre,
+  figure,
+  img {
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  img,
+  svg {
+    max-width: 100% !important;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+}

@@ -52,3 +52,11 @@ tfoot td {
   border-bottom: 0;
   font-weight: var(--font-weight-medium);
 }
+
+@media (max-width: 47.9375rem) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
