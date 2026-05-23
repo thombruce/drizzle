@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <h1>Article</h1>
+  <p>
+    <code>&lt;article&gt;</code> with a direct <code>&lt;header&gt;</code> or <code>&lt;footer&gt;</code>
+    child gets context-aware styling automatically — no classes required.
+  </p>
+
+  <h2>Blog listing</h2>
+  <p>Multiple articles stacked, each with a header and footer:</p>
+
+  <article>
+    <header>
+      <h3><a href="#">The Cascade Is Not Your Enemy</a></h3>
+      <p>Specificity, inheritance, and source order — the three rules that govern everything.</p>
+    </header>
+    <p>
+      Most developers learn to fight the cascade before they learn to use it. The result is a
+      stylesheet full of <code>!important</code> declarations and ever-climbing specificity arms races.
+      Understanding how the cascade actually resolves conflicts changes everything.
+    </p>
+    <footer>
+      <p>By <strong>Alex Rivera</strong> · <time datetime="2026-05-15">May 15, 2026</time> · <a href="#">8 min read</a></p>
+    </footer>
+  </article>
+
+  <article>
+    <header>
+      <h3><a href="#">Custom Properties Done Right</a></h3>
+      <p>How to design a token system that scales without breaking.</p>
+    </header>
+    <p>
+      CSS custom properties are not just variables — they are live values that participate in
+      inheritance. A token system built on this behaviour can theme an entire UI from a handful
+      of overrides on <code>:root</code>.
+    </p>
+    <footer>
+      <p>By <strong>Sam Okafor</strong> · <time datetime="2026-05-10">May 10, 2026</time> · <a href="#">6 min read</a></p>
+    </footer>
+  </article>
+
+  <article>
+    <header>
+      <h3><a href="#">Writing Classless CSS</a></h3>
+      <p>Every semantic element deserves a style. Here is how to make it work in practice.</p>
+    </header>
+    <p>
+      A classless framework forces you to write selectors that match how HTML was meant to be read.
+      The constraint is productive — it surfaces bad markup and rewards clean structure.
+    </p>
+    <footer>
+      <p>By <strong>Jordan Lee</strong> · <time datetime="2026-05-03">May 3, 2026</time> · <a href="#">4 min read</a></p>
+    </footer>
+  </article>
+
+  <hr>
+
+  <h2>Full article</h2>
+  <p>A single article with an internal section structure:</p>
+
+  <article>
+    <header>
+      <h2>Understanding CSS Cascade Layers</h2>
+      <p>
+        Cascade layers give you explicit control over the order of precedence in your stylesheet.
+        No more fighting specificity — just declare your layers and let the cascade do its job.
+      </p>
+      <p><small>By <strong>Jane Smith</strong> · <time datetime="2026-05-18">May 18, 2026</time> · 12 min read</small></p>
+    </header>
+
+    <section>
+      <header>
+        <h3>What are cascade layers?</h3>
+      </header>
+      <p>
+        Introduced in CSS 2022, <code>@layer</code> lets you group rules into named layers and
+        declare their priority order upfront. A rule in a later layer always beats a rule in an
+        earlier layer, regardless of specificity.
+      </p>
+      <pre><code>@layer reset, base, components, utilities;</code></pre>
+      <p>
+        That one declaration fixes the entire precedence hierarchy for your stylesheet.
+        Utilities will always override components; components will always override base styles.
+      </p>
+    </section>
+
+    <section>
+      <header>
+        <h3>Why specificity stops mattering</h3>
+      </header>
+      <p>
+        Without layers, a low-specificity utility rule can be defeated by a high-specificity
+        component rule written earlier in the file. With layers, the layer order is the final
+        word — specificity only breaks ties <em>within</em> the same layer.
+      </p>
+      <p>
+        This means you can write utilities as single-class selectors and trust they will win
+        over multi-class component selectors, as long as <code>utilities</code> is declared last.
+      </p>
+    </section>
+
+    <section>
+      <header>
+        <h3>Layers in Drizzle CSS</h3>
+      </header>
+      <p>
+        Drizzle declares eleven layers in a fixed order:
+      </p>
+      <pre><code>@layer tokens, dark, reset, base, typography, lists, tables, forms, media, utilities, palette;</code></pre>
+      <p>
+        <code>palette</code> sits last so colour modifiers like <code>.bg-red</code> always win
+        over layout utilities — even when both set <code>background</code>.
+        This was a real bug in the first build; the fix was a single import-order swap.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        <strong>Jane Smith</strong> is a frontend engineer and CSS enthusiast.
+        · <a href="#">More articles</a>
+        · <time datetime="2026-05-18">May 18, 2026</time>
+      </p>
+    </footer>
+  </article>
+
+</body>
+</html>

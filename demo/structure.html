@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structure — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <h1>Document Structure</h1>
+  <p>Context-based CSS variants — the same element styled differently depending on its parent. No classes needed.</p>
+
+  <h2>Article with header and footer</h2>
+  <p>A direct <code>&lt;header&gt;</code> child of <code>&lt;article&gt;</code> gets a compact bottom border. A direct <code>&lt;footer&gt;</code> child gets a top border with muted, small text.</p>
+
+  <article>
+    <header>
+      <h3>Understanding CSS Cascade Layers</h3>
+      <p>A deep dive into <code>@layer</code> and explicit cascade control.</p>
+    </header>
+    <p>Cascade layers let you declare explicit priority rules across groups of styles, so specificity battles become unnecessary. The order of the <code>@layer</code> declaration determines which layer wins — later layers override earlier ones, regardless of selector specificity.</p>
+    <p>Drizzle itself uses eleven layers: <code>tokens → dark → reset → base → typography → lists → tables → forms → media → utilities → palette</code>.</p>
+    <footer>
+      <p>By <strong>Jane Smith</strong> · <time datetime="2026-05-18">May 18, 2026</time> · <a href="#">5 min read</a></p>
+    </footer>
+  </article>
+
+  <h2>Section with header</h2>
+  <p>A direct <code>&lt;header&gt;</code> child of <code>&lt;section&gt;</code> gets a subtle bottom border — marks a section boundary without the full article treatment.</p>
+
+  <section>
+    <header>
+      <h3>Introduction</h3>
+    </header>
+    <p>Sections divide content into thematic groups. The header within a section labels that group without competing with the page or article heading hierarchy.</p>
+  </section>
+
+  <h2>Nested: article containing sections</h2>
+  <p>An <code>&lt;article&gt;</code> with multiple <code>&lt;section&gt;</code> elements, each with their own <code>&lt;header&gt;</code>:</p>
+
+  <article>
+    <header>
+      <h3>A Multi-Part Guide</h3>
+      <p>Three sections, each marked with its own section header.</p>
+    </header>
+
+    <section>
+      <header>
+        <h4>Part 1 — Basics</h4>
+      </header>
+      <p>The article header above frames the whole piece. Section headers mark subdivisions within it — a consistent subordinate treatment throughout.</p>
+    </section>
+
+    <section>
+      <header>
+        <h4>Part 2 — Intermediate</h4>
+      </header>
+      <p>Section headers at the same depth share the same context-based style. No classes, no extra markup — just structure.</p>
+    </section>
+
+    <section>
+      <header>
+        <h4>Part 3 — Advanced</h4>
+      </header>
+      <p>The cascade follows document structure, not class names.</p>
+    </section>
+
+    <footer>
+      <p>Published by <strong>Drizzle CSS</strong> · <time datetime="2026-05-18">May 2026</time></p>
+    </footer>
+  </article>
+
+  <h2>Header with navigation</h2>
+  <p>A <code>&lt;nav&gt;</code> that is a direct child of <code>&lt;header&gt;</code> lays out as a flex row:</p>
+
+  <header>
+    <h3>Example Site Header</h3>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+</body>
+</html>

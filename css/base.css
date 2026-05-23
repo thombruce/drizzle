@@ -67,6 +67,33 @@ aside {
   margin: var(--gutter-md) 0;
 }
 
+article > header {
+  padding-block: var(--gutter-md) var(--gutter-sm);
+  border-bottom: var(--border-width-thin) var(--border-style) var(--color-border);
+  margin-bottom: var(--gutter-md);
+}
+
+article > footer {
+  padding-block: var(--gutter-sm);
+  border-top: var(--border-width-thin) var(--border-style) var(--color-border);
+  margin-top: var(--gutter-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+section > header {
+  padding-block: var(--gutter-sm);
+  border-bottom: var(--border-width-thin) var(--border-style) var(--color-border);
+  margin-bottom: var(--gutter-md);
+}
+
+header > nav {
+  display: flex;
+  gap: var(--gutter-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 iframe {
   display: block;
   max-width: 100%;
