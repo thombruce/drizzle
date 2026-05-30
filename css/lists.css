@@ -47,3 +47,9 @@ nav ol {
   flex-wrap: wrap;
   gap: var(--gutter-md);
 }
+
+nav[aria-label~="breadcrumb"] ol li + li::before {
+  content: var(--breadcrumb-separator);
+  margin-right: var(--gutter-xs);
+  color: var(--color-muted);
+}

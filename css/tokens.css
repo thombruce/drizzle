@@ -132,4 +132,5 @@
   --alert-tint:          12%;
   --meter-height:        0.6rem;
   --textarea-min-height: 6rem;
+  --breadcrumb-separator: "/";
 }
