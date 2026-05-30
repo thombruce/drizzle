@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Bundle CSS
+        run: cargo run --release --bin drizzle-build
+
+      - name: Verify artifacts
+        run: |
+          test -s dist/drizzle.css
+          test -s dist/drizzle.min.css
+
+      - name: Publish release with artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/drizzle.css
+            dist/drizzle.min.css
+          generate_release_notes: true
+          fail_on_unmatched_files: true

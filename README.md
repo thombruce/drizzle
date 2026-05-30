@@ -18,6 +18,18 @@ A classless-first CSS framework driven by CSS variables, bundled with the Rust [
 </body>
 ```
 
+## Download (prebuilt)
+
+Each tagged release publishes `drizzle.css` and `drizzle.min.css` as GitHub release assets. Pin a version or pull the latest:
+
+```sh
+# Latest
+curl -O https://github.com/thombruce/drizzle/releases/latest/download/drizzle.min.css
+
+# Pinned
+curl -O https://github.com/thombruce/drizzle/releases/download/v0.1.0/drizzle.min.css
+```
+
 ## Use in a Rust project
 
 Add to `Cargo.toml`:
