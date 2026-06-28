@@ -7,6 +7,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
   margin-top: var(--gutter-xl);
   margin-bottom: var(--gutter-md);
+  text-wrap: balance;
+  scroll-margin-top: var(--gutter-lg);
 }
 
 h1:first-child,
@@ -27,6 +29,7 @@ h6 { font-size: var(--font-size-h6); text-transform: uppercase; letter-spacing: 
 
 p {
   margin: 0 0 var(--gutter-md);
+  text-wrap: pretty;
 }
 
 p + p {

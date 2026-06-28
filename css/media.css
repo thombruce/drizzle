@@ -52,7 +52,7 @@ summary::before {
   display: inline-block;
   font-size: 0.7em;
   margin-right: var(--gutter-xs);
-  transition: transform var(--transition-default);
+  transition: transform var(--transition);
 }
 
 details[open] > summary::before {
@@ -74,6 +74,21 @@ dialog {
 }
 
 dialog::backdrop {
+  background: var(--backdrop-bg);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+[popover] {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: var(--border-width-thin) var(--border-style) var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--gutter-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: var(--dialog-width);
+}
+
+[popover]::backdrop {
   background: var(--backdrop-bg);
   backdrop-filter: var(--backdrop-blur);
 }
