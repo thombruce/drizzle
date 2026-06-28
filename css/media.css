@@ -79,6 +79,11 @@ dialog::backdrop {
 }
 
 [popover] {
+  position: fixed;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
   background: var(--color-bg);
   color: var(--color-text);
   border: var(--border-width-thin) var(--border-style) var(--color-border);
