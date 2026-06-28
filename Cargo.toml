@@ -1,6 +1,6 @@
 [package]
 name = "drizzle-css"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 description = "Classless-first CSS framework — exposes compiled CSS as &'static str constants."
 license = "MIT"
