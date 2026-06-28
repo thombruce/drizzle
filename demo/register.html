@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <main class="narrow">
+    <article class="card">
+      <h1>Create your account</h1>
+      <p class="muted">Free forever. No card required.</p>
+
+      <form>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+        <small class="muted">At least 8 characters.</small>
+
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" name="confirm" type="password" autocomplete="new-password" minlength="8" placeholder="Re-enter password" required>
+
+        <fieldset>
+          <legend>Account type</legend>
+          <label><input type="radio" name="plan" value="personal" checked> Personal</label><br>
+          <label><input type="radio" name="plan" value="team"> Team</label>
+        </fieldset>
+
+        <label><input type="checkbox" name="terms" required> I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a></label>
+
+        <p class="stack">
+          <button type="submit">Create account</button>
+        </p>
+      </form>
+    </article>
+
+    <p class="center">Already registered? <a href="login.html">Sign in</a></p>
+  </main>
+
+</body>
+</html>

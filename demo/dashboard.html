@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body class="wide">
+
+  <header>
+    <h1>Dashboard</h1>
+    <nav>
+      <a href="#" aria-current="page">Overview</a>
+      <a href="#">Projects</a>
+      <a href="#">Team</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <nav aria-label="breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Workspace</a></li>
+      <li aria-current="page">Overview</li>
+    </ol>
+  </nav>
+
+  <main>
+    <h2>This month</h2>
+    <div class="grid">
+      <article class="card">
+        <small class="muted">Revenue</small>
+        <h3>$48,210</h3>
+        <p class="text-success">▲ 12.4% vs last month</p>
+      </article>
+      <article class="card">
+        <small class="muted">Active users</small>
+        <h3>9,431</h3>
+        <p class="text-success">▲ 3.1%</p>
+      </article>
+      <article class="card">
+        <small class="muted">Churn</small>
+        <h3>1.8%</h3>
+        <p class="text-error">▲ 0.4%</p>
+      </article>
+      <article class="card">
+        <small class="muted">Open tickets</small>
+        <h3>27</h3>
+        <p class="muted">— unchanged</p>
+      </article>
+    </div>
+
+    <div class="alert info">
+      <strong>Heads up:</strong> Scheduled maintenance this Sunday 02:00–03:00 UTC.
+    </div>
+
+    <h2>Recent activity</h2>
+    <table>
+      <caption>Last five events</caption>
+      <thead>
+        <tr><th>When</th><th>User</th><th>Action</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>09:42</td><td>ada@example.com</td><td>Deployed <code>api</code></td><td><span class="badge bg-success">Success</span></td></tr>
+        <tr><td>09:31</td><td>grace@example.com</td><td>Invited teammate</td><td><span class="badge">Pending</span></td></tr>
+        <tr><td>08:55</td><td>alan@example.com</td><td>Updated billing</td><td><span class="badge bg-success">Success</span></td></tr>
+        <tr><td>08:12</td><td>edsger@example.com</td><td>Rolled back <code>web</code></td><td><span class="badge bg-warning">Reverted</span></td></tr>
+        <tr><td>07:48</td><td>linus@example.com</td><td>Failed login</td><td><span class="badge bg-error">Error</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Usage</h2>
+    <label for="storage">Storage (70% of 50 GB)</label>
+    <meter id="storage" value="0.7" min="0" max="1" low="0.5" high="0.85" optimum="0.4">70%</meter>
+
+    <p class="row">
+      <button>New project</button>
+      <button class="button-outline">Invite team</button>
+    </p>
+  </main>
+
+  <hr>
+  <footer>
+    <p><small class="muted">Signed in as ada@example.com · <a href="#">Sign out</a></small></p>
+  </footer>
+
+</body>
+</html>

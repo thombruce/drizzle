@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features — Drizzle CSS</title>
+  <link rel="stylesheet" href="../dist/drizzle.css">
+</head>
+<body>
+
+  <nav><a href="index.html">← Home</a></nav>
+  <hr>
+
+  <h1>Feature showcase</h1>
+  <p>Recently added element and attribute support — all classless unless noted.</p>
+
+  <h2>Breadcrumb navigation</h2>
+  <p>A <code>&lt;nav aria-label="breadcrumb"&gt;</code> with an <code>&lt;ol&gt;</code> auto-inserts a separator (<code>--breadcrumb-separator</code>) between items.</p>
+  <nav aria-label="breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li><a href="#">CSS</a></li>
+      <li aria-current="page">Drizzle</li>
+    </ol>
+  </nav>
+
+  <h2>Search landmark</h2>
+  <p>The <code>&lt;search&gt;</code> element is a first-class block-level landmark.</p>
+  <search>
+    <form role="search">
+      <label for="q">Search the docs</label>
+      <input id="q" type="search" name="q" placeholder="Type to search…">
+      <button type="submit">Search</button>
+    </form>
+  </search>
+
+  <h2>Popover</h2>
+  <p>The native <code>popover</code> attribute, themed like <code>&lt;dialog&gt;</code> with a blurred backdrop.</p>
+  <button popovertarget="info-pop">Show popover</button>
+  <div id="info-pop" popover>
+    <h3>Native popover</h3>
+    <p>This is a <code>[popover]</code> element. Click outside or press <kbd>Esc</kbd> to dismiss.</p>
+    <button popovertarget="info-pop" popovertargetaction="hide">Close</button>
+  </div>
+
+  <h2>Alerts</h2>
+  <p>The <code>.alert</code> class with semantic modifiers — tinted background plus a coloured left border.</p>
+  <div class="alert info"><strong>Info:</strong> A new version is available.</div>
+  <div class="alert success"><strong>Success:</strong> Your changes have been saved.</div>
+  <div class="alert warning"><strong>Warning:</strong> Your trial ends in 3 days.</div>
+  <div class="alert error"><strong>Error:</strong> Could not connect to the server.</div>
+
+  <h2>Balanced text wrapping</h2>
+  <p>Headings use <code>text-wrap: balance</code> so multi-line titles split evenly; paragraphs use <code>text-wrap: pretty</code> to avoid orphans. Resize the window to see headings rebalance.</p>
+  <h3>A deliberately long heading that will wrap across several lines on narrow screens</h3>
+
+  <h2>Inline semantics</h2>
+  <p>
+    Highlight with <mark>mark</mark>, keys like <kbd>Ctrl</kbd>+<kbd>C</kbd>, abbreviations such as
+    <abbr title="Cascading Style Sheets">CSS</abbr>, variables like <var>x</var>, code <code>const n = 1</code>,
+    and quotes <q>inline quote</q>. Superscript<sup>2</sup> and subscript<sub>n</sub> too.
+  </p>
+
+  <h2>Output</h2>
+  <form oninput="result.value = Number(a.value) + Number(b.value)">
+    <label for="a">A</label>
+    <input id="a" type="number" value="2" style="display:inline-block;width:auto">
+    +
+    <input id="b" type="number" value="3" style="display:inline-block;width:auto">
+    = <output id="result" name="result" for="a b">5</output>
+  </form>
+
+</body>
+</html>
